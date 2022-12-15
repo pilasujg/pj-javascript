@@ -79,7 +79,8 @@
      </div>
      <div class="d-flex align-items-center justify-content-between">
         <div class="text">resultado</div>
-        <span id="resultado" value=""></span>
+        <span id="resultado" class="text-secondary" value=""></span>
+        <span id="resultado1" class="text-secondary" value=""></span>
      </div>
                                 
 </body>
@@ -97,11 +98,14 @@ $(document).ready(function() {
     let primero = $("#numberA").val();
     let second = $("#numberB").val();
     let resultado = $("#resultado");
+    let resultado1 = $("#resultado1");
     let suma = 0
     suma = parseInt(primero) + parseInt(second)
     console.log(suma)
-    resultado.attr( `total ${suma} Adults`)
-
+    resultado.text( `Suman ${suma} en Total`)
+    let producto = 0
+    producto = parseInt(primero) * parseInt(second)
+    resultado1.text( `Multiplican ${producto} en Total`)
 }
 });
 </script>
