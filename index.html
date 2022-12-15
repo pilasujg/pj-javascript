@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS INTERESANTE</title>
     <link rel="shortcut icon" href="#">
+    
+
     <style>
         * {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Noto Sans", "Helvetica Neue", sans-serif;
@@ -55,11 +57,39 @@
           color: #333;
           border: none;
         }
+
+        #resultado{
+            color: rgb(208, 12, 12);
+            font-weight: 300;
+            font-size: x-large;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        #resultado1{
+            color: rgb(6, 132, 25);
+            font-size: x-large;
+            font-weight: 300;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: bisque;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
         </style>
 
 </head>
 <body>
+ 
     <!--  SUMA CON BOTONES CSS Y SCRIPT  -->
+    <!--  step de 1 y dos  -->
+    <div class="container">
     <h5>Botones</h5>
     <div class="d-flex align-items-center justify-content-between">
                                 
@@ -73,22 +103,26 @@
                                 
         <div class="text">segundo</div>
         <div>
-        <span class="stepper"><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">–</button><input class="prevent-select plus-icon-people hover-pointer px-3 py-1" type="number" value="0" min="0" step="1" id="numberB" readonly>
+        <span class="stepper"><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">–</button><input class="prevent-select plus-icon-people hover-pointer px-3 py-1" type="number" value="0" min="0" step="2" id="numberB" readonly>
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button></span>
         </div>
      </div>
      <div class="d-flex align-items-center justify-content-between">
         <div class="text">resultado</div>
-        <span id="resultado" class="text-secondary" value=""></span>
-        <span id="resultado1" class="text-secondary" value=""></span>
+        <br>
+        <br>
+        <span id="resultado" class="text" value=""></span>
+        <br>
+       <br> <span id="resultado1" class="text" value=""></span>
      </div>
-                                
+    </div>                           
 </body>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
     crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
 
 
