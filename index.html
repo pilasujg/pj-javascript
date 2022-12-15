@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS INTERESANTE</title>
+    <link rel="shortcut icon" href="#">
+    <style>
+        * {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Noto Sans", "Helvetica Neue", sans-serif;
+            box-sizing: border-box;
+        }
+        h2, p{
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        /* The important part */
+        
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          height: auto;
+        }
+        
+        .stepper {
+          border: 1px solid #eee;
+          display: inline-block;
+          overflow: visible;
+          height: 2.1em;
+          background: #fff;
+          padding: 1px;
+          font-size: 1.3em;
+        }
+        
+        .stepper input {
+          width: 3em;
+          height: 100%;
+          text-align: center;
+          border: 0;
+          background: transparent;
+          color: #000;
+          font-size: 1em;
+        }
+        
+        .stepper button {
+          width: 1.4em;
+          font-weight: 300;
+          height: 100%;
+          line-height: 0.1em;
+          font-size: 1.4em;
+          padding: 0.2em !important;
+          background: #eee;
+          color: #333;
+          border: none;
+        }
+        </style>
+
+</head>
+<body>
+    <!--  SUMA CON BOTONES CSS Y SCRIPT  -->
+    <h5>Botones</h5>
+    <div class="d-flex align-items-center justify-content-between">
+                                
+        <div class="text">primer</div>
+        <div>
+        <span class="stepper"><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">–</button><input class="prevent-select plus-icon-people hover-pointer px-3 py-1" type="number" value="0" min="0" step="1" id="numberA" readonly>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button></span>
+        </div>
+     </div>
+     <div class="d-flex align-items-center justify-content-between">
+                                
+        <div class="text">segundo</div>
+        <div>
+        <span class="stepper"><button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">–</button><input class="prevent-select plus-icon-people hover-pointer px-3 py-1" type="number" value="0" min="0" step="1" id="numberB" readonly>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button></span>
+        </div>
+     </div>
+     <div class="d-flex align-items-center justify-content-between">
+        <div class="text">resultado</div>
+        <span id="resultado" value=""></span>
+     </div>
+                                
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+
+<script>
+
+
+$(document).ready(function() {  
+    $(".stepper").on("click", funSuma);
+   function funSuma() {
+    let primero = $("#numberA").val();
+    let second = $("#numberB").val();
+    let resultado = $("#resultado");
+    let suma = 0
+    suma = parseInt(primero) + parseInt(second)
+    console.log(suma)
+    resultado.attr( `total ${suma} Adults`)
+
+}
+});
+</script>
